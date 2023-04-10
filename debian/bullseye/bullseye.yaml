@@ -1,0 +1,31 @@
+---
+target: debian-bullseye-11.tar.gz
+rootfs:
+  suite: bullseye
+  variant: minbase
+  mirror: http://ftp.ca.debian.org/debian
+  packages:
+   - sudo
+   - apt-transport-https
+   - ca-certificates
+   - initramfs-tools
+   - linux-image-amd64
+   - apparmor
+   - net-tools
+   - openssh-client
+   - openssh-server
+   - vim.tiny
+   - adduser
+   - apt-utils
+   - iptables
+   - iproute2
+   - kmod
+   - locales
+   - lsb-base
+   - netbase
+   - systemd-sysv
+   - udev
+  components:
+    - main
+    - contrib
+    - non-free
