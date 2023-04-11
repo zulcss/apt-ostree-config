@@ -1,0 +1,7 @@
+---
+target: starlingx-master.tar.gz
+rootfs:
+  suite: bullseye
+  mirror: repo.conf
+  packages:
+    - python3
