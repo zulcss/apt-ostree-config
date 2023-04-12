@@ -2,6 +2,8 @@
 target: starlingx-master.tar.gz
 rootfs:
   suite: bullseye
-  mirror: repo.conf
-  packages:
-    - python3
+  mirror: http://ftp.ca.debian.org/debian
+ostree:
+  repo: repo
+  branch: debian/12
+  tree: ostree_repo
