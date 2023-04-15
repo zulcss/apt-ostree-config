@@ -1,7 +1,8 @@
 ---
 target: starlingx-master.tar.gz
 rootfs:
+  variant: custom
   suite: bullseye
   mirror: repo.conf
   packages:
-    - python3
+    - ~prequired|~pimportant|~pstandard
