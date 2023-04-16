@@ -5,4 +5,9 @@ rootfs:
   suite: bullseye
   mirror: repo.conf
   packages:
+    # standard install
     - ~prequired|~pimportant|~pstandard
+    - ostree
+    - ifupdown
+    - openssh-server
+    - linux-image-5.10.0-6-amd64-unsigned
