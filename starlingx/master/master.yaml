@@ -14,8 +14,11 @@ rootfs:
   variant: custom
   suite: bullseye
   mirror: repo.conf
+  customize-hook:
+      - /usr/share/mmdebstrap/hooks/ostree
   packages:
-    # standard install
+    # standard install, install required, important, and standard
+    # packages
     - ~prequired|~pimportant|~pstandard
     - ostree
     - ifupdown
