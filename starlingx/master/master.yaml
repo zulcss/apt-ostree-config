@@ -20,7 +20,7 @@ rootfs:
     # standard install, install required, important, and standard
     # packages
     - ~prequired|~pimportant|~pstandard
-    - starlingx-core
+    - starlingx-simplex
     - ifupdown
     - openssh-server
     - linux-image-5.10.0-6-amd64-unsigned
