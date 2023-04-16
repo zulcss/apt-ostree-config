@@ -1,6 +1,16 @@
 ---
 target: starlingx-master.tar.gz
 rootfs:
+  dpkgOpt:
+      - 'force-unsafe-io'
+      - 'path-include=/usr/share/man/man[1-9]/*'
+      - 'path-exclude=/usr/share/man/*'
+      - 'path-include=/usr/share/man/man[1-9]/*'
+      - 'path-exclude=/usr/share/locale/*' 
+      - 'path-include=/usr/share/locale/locale.alias' 
+      - 'path-exclude=/usr/share/doc/*' 
+      - 'path-include=/usr/share/doc/*/copyright'
+      - 'path-include=/usr/share/doc/*/changelog.Debian.*' 
   variant: custom
   suite: bullseye
   mirror: repo.conf
