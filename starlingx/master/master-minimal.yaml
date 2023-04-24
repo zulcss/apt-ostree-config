@@ -1,5 +1,5 @@
 ---
-target: starlingx-master.tar.gz
+target: starlingx-master-minimal.tar.gz
 rootfs:
   dpkgOpt:
       - 'force-unsafe-io'
@@ -11,19 +11,10 @@ rootfs:
       - 'path-exclude=/usr/share/doc/*' 
       - 'path-include=/usr/share/doc/*/copyright'
       - 'path-include=/usr/share/doc/*/changelog.Debian.*' 
-  variant: custom
+  variant: minbase
   suite: bullseye
   mirror: repo.conf
-  hook-directory:
-      - /usr/share/mmdebstrap/hooks/ostree
   packages:
-    # standard install, install required, important, and standard
-    # packages
-    - ~prequired|~pimportant|~pstandard
-    - starlingx-simplex
-    - ifupdown
+    - starlingx-minimal
     - openssh-server
     - linux-image-5.10.0-6-amd64-unsigned
-ostree:
-    repo: repo
-    branch: starlingx/master
