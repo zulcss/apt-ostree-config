@@ -1,0 +1,17 @@
+---
+target: debian-bookworm-12.tar.gz
+rootfs:
+  suite: bookworm
+  variant: minbase
+  mirror: http://ftp.ca.debian.org/debian
+  packages:
+    - init
+    - udev
+    - linux-image-cloud
+  components:
+    - main
+    - contrib
+    - non-free
+  ostree:
+    repo: ostree_repo
+    branch: debian/bookworm/x86_64
